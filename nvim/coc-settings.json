@@ -1,0 +1,16 @@
+{
+    "diagnostic.virtualText": false,
+    "diagnostic.virtualTextCurrentLineOnly": true,
+    "diagnostic.refreshOnInsertMode": true,
+    "pyright.trace.server": "messages",
+    "python.linting.pylintEnabled": false,
+    "languageserver": {
+        "nim": {
+            "command": "nimlsp.cmd",
+            "filetypes": ["nim"]
+        }
+    },
+    "typescript.suggest.autoImports": true,
+    "typescript.preferences.includePackageJsonAutoImports": "on"
+}
+

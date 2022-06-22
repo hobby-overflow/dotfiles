@@ -1,0 +1,16 @@
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+rev = 'release'
+hook_add = '''
+    let g:coc_global_extensions = ['coc-json', 'coc-css', 'coc-prettier', 'coc-tsserver', 'coc-toml', 'coc-pyright', 'coc-go', 'coc-vimlsp']
+    call coc#util#install()
+'''
+
+[[plugins]]
+repo = 'sainnhe/gruvbox-material'
+
+[[plugins]]
+repo = 'miyakogi/seiya.vim'
+
+[[plugins]]
+repo = 'cohama/lexima.vim'
