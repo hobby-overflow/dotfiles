@@ -12,7 +12,7 @@ nmap s [ff]
 xmap s [ff]
 
 inoremap <silent> jj <ESC>
-" inoremap <silent>  <ESC>o
+" inoremap <silent>  <ESC>o
 inoremap <silent>  <C-o>:w<CR>
 nnoremap <silent>  :w<CR>
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
