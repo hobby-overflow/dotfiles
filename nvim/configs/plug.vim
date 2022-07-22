@@ -1,4 +1,11 @@
-call plug#begin('C:/Users/user/.vim/plugged')
+
+if has('win32') || has('win64')
+    call plug#begin('C:/Users/user/.vim/plugged')
+endif
+
+if has('unix')
+    call plug#begin('/home/user/.vim/plugged')
+endif
 
 if has('nvim')
 	Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
