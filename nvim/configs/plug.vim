@@ -47,7 +47,8 @@ Plug 'rhysd/clever-f.vim'
 Plug 'vim-denops/denops.vim'
 
 Plug 'machakann/vim-sandwich'
-Plug 'windwp/nvim-autopairs'
+" Plug 'windwp/nvim-autopairs'
+Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 
