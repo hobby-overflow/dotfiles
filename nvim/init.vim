@@ -40,11 +40,6 @@ runtime! configs/*.vim
 runtime! keymap.vim
 colorscheme gruvbox-material
 
-lua <<EOF
-require('nvim-autopairs').setup({
-    disable_filetype = { "json" }
-})
-EOF
 command! Config :e $MYVIMRC
 command! Configs :Defx ~/AppData/Local/nvim/configs
 
