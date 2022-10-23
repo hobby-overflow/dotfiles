@@ -43,12 +43,4 @@ colorscheme gruvbox-material
 command! Config :e $MYVIMRC
 command! Configs :Defx ~/AppData/Local/nvim/configs
 
-inoremap <expr><CR> pumvisible() ? "<C-y>" : "<CR>"
-
-set completeopt=menuone,noinsert
-inoremap <expr><C-n> pumvisible() ? "<Down>" : "<C-n>"
-inoremap <expr><C-p> pumvisible() ? "<Up>" : "<C-p>"
-
-inoremap <expr><Tab> pumvisible() ? "<C-n>" : "<Tab>"
-
 autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
