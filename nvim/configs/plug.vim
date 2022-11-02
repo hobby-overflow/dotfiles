@@ -8,10 +8,7 @@ if has('unix')
 endif
 
 if has('nvim')
-	Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
-    Plug 'kristijanhusak/defx-git'
-    Plug 'kristijanhusak/defx-icons'
     Plug 'nvim-treesitter/nvim-treesitter'
 endif
  

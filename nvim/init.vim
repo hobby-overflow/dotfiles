@@ -41,6 +41,13 @@ runtime! keymap.vim
 colorscheme gruvbox-material
 
 command! Config :e $MYVIMRC
-command! Configs :Defx ~/AppData/Local/nvim/configs
+if has('windows')
+    command! Configs :e ~/AppData/Local/nvim/configs
+endif
+
+if has('unix')
+    command! Configs :e ~/.config/nvim
+endif
+
 
 autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
