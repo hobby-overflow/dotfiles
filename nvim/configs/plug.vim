@@ -37,7 +37,8 @@ Plug 'thinca/vim-quickrun'
  
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'bling/vim-bufferline'
+" What vim-bufferline? because overwrite message
+" Plug 'bling/vim-bufferline'
  
 Plug 'sainnhe/gruvbox-material'
 Plug 'rhysd/clever-f.vim'
