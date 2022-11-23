@@ -58,4 +58,6 @@ Plug 'tpope/vim-fugitive'
 
 Plug 'mattn/emmet-vim', { 'for': 'html'}
 
+Plug 'airblade/vim-gitgutter'
+
 call plug#end()
