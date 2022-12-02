@@ -68,7 +68,7 @@ let $FZF_PREVIEW_BAT_THEME = 'gruvbox-dark'
 
 nnoremap <silent> <C-p> :<C-u>CocCommand fzf-preview.FromResources buffer project_mru project<CR>
 nnoremap <silent> [ff]s :<C-u>CocCommand fzf-preview.GitStatus<CR>
-nnoremap <silent> [ff]f :<C-u>CocCommand fzf-preview.ProjectGrep --add-fzf-arg=--exact --add-fzf-arg=--no-sort<Space>
+nnoremap <silent> [ff]f :<C-u>CocCommand fzf-preview.ProjectGrep --add-fzf-arg=--exact --add-fzf-arg=--no-sort<CR>
 " xnoremap [ff]f "sy:CocCommand fzf-preview.ProjectGrep --add-fzf-arg=--exact --add-fzf-arg=--no-sort<Space>-F<Space>"<C-r>=substitute(substitute(@s, '\n', '', 'g'), '/', '\\/', 'g')<CR>"
 
 nnoremap <silent> [ff]q :<C-u>CocCommand fzf-preview.CocCurrentDiagnostics<CR>
