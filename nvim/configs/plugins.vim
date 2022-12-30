@@ -24,6 +24,7 @@ call jetpack#begin()
     call jetpack#add('tpope/vim-commentary')
     call jetpack#add('mattn/emmet-vim', { 'for': 'html'})
     call jetpack#add('airblade/vim-gitgutter')
+    call jetpack#add('editorconfig/editorconfig-vim')
 call jetpack#end()
 
 " if has('win32') || has('win64')
