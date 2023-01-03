@@ -35,9 +35,7 @@ let g:clever_f_ignore_case=0
 let g:clever_f_smart_case=1
 let g:clever_f_fix_key_direction=1
 
-runtime! vim-plug.vim
 runtime! configs/*.vim
-runtime! keymap.vim
 colorscheme gruvbox-material
 
 command! Config :e $MYVIMRC
