@@ -1,13 +1,11 @@
-" let s:jetpackurl = "https://raw.githubusercontent.com/tani/vim-jetpack/master/plugin/jetpack.vim"
+let s:jetpackfile = stdpath('data') .. '/site/autoload/jetpack.vim'
+let s:jetpackurl = "https://raw.githubusercontent.com/tani/vim-jetpack/master/plugin/jetpack.vim"
 
-let jetpackfile = stdpath('data') .. '/site/autoload/jetpack.vim'
-let jetpackurl = "http://localhost:8000/jetpack.vim"
-
-let has_jetpack = filereadable(jetpackfile)
+let has_jetpack = filereadable(s:jetpackfile)
 
 if has_jetpack != 1
-    echo "Jetpack downloading"
-    call system(printf('curl -fsSLo %s --create-dirs %s', jetpackfile, jetpackurl))
+    echo "Jetpack not found, now download"
+    call system(printf('curl -fsSLo %s --create-dirs %s', s:jetpackfile, s:jetpackurl))
 endif
 
 for name in jetpack#names()
