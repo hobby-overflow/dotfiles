@@ -1,3 +1,22 @@
+" let s:jetpackurl = "https://raw.githubusercontent.com/tani/vim-jetpack/master/plugin/jetpack.vim"
+
+let jetpackfile = stdpath('data') .. '/site/autoload/jetpack.vim'
+let jetpackurl = "http://localhost:8000/jetpack.vim"
+
+let has_jetpack = filereadable(jetpackfile)
+
+if has_jetpack != 1
+    echo "Jetpack downloading"
+    call system(printf('curl -fsSLo %s --create-dirs %s', jetpackfile, jetpackurl))
+endif
+
+for name in jetpack#names()
+    if !jetpack#tap(name)
+        call jetpack#sync()
+        break
+    endif
+endfor
+
 call jetpack#begin()
     " bootstrap
     call jetpack#add('neoclide/coc.nvim', {'branch': 'release'})
