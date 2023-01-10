@@ -43,25 +43,3 @@ call jetpack#begin()
     call jetpack#add('airblade/vim-gitgutter')
     call jetpack#add('editorconfig/editorconfig-vim')
 call jetpack#end()
-
-" if has('win32') || has('win64')
-"     call plug#begin('C:/Users/user/.vim/plugged')
-" endif
-" 
-" if has('unix')
-"     call plug#begin('/home/user/.vim/plugged')
-" endif
-" 
-" if has('nvim')
-"     Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
-"     Plug 'nvim-treesitter/nvim-treesitter'
-" endif
-"  
-" Plug 'prabirshrestha/vim-lsp'
-" Plug 'mattn/vim-lsp-settings'
-" Plug 'baabelfish/nvim-nim', { 'for': 'nim'}
-" 
-" Plug 'tpope/vim-fugitive'
-" 
-" 
-" Plug 'airblade/vim-gitgutter'
