@@ -28,7 +28,7 @@ call jetpack#begin()
 
     call jetpack#add('vim-airline/vim-airline')
     call jetpack#add('sainnhe/gruvbox-material')
-    call jetpack#add('rhysd/clever-f')
+    call jetpack#add('rhysd/clever-f.vim')
     call jetpack#add('thinca/vim-quickrun')
 
     call jetpack#add('yuki-yano/ddu-filter-fzf')
