@@ -6,7 +6,7 @@
     "python.linting.pylintEnabled": false,
     "languageserver": {
         "nim": {
-            "command": "nimlsp.cmd",
+            "command": "nimlsp",
             "filetypes": ["nim"]
         }
     },

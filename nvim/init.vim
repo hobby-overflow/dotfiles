@@ -43,3 +43,7 @@ if has('unix')
 endif
 
 autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
+
+lua << END
+require("lualine").setup()
+END

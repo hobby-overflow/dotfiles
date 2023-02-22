@@ -20,8 +20,7 @@ call jetpack#begin()
     call jetpack#add('neoclide/coc.nvim', {'branch': 'release'})
     call jetpack#add('junegunn/fzf', {'build': './install --all'})
     call jetpack#add('junegunn/fzf.vim')
-
-    call jetpack#add('yuki-yano/fzf-preview.vim', {'branch': 'release/remote', 'do': 'UpdateRemotePlugins' })
+    " call jetpack#add('yuki-yano/fzf-preview.vim', {'branch': 'release/remote', 'do': 'UpdateRemotePlugins' })
     if has('nvim')
         call jetpack#add('nvim-treesitter/nvim-treesitter')
     endif
@@ -42,4 +41,11 @@ call jetpack#begin()
     call jetpack#add('mattn/emmet-vim', { 'for': 'html'})
     call jetpack#add('airblade/vim-gitgutter')
     call jetpack#add('editorconfig/editorconfig-vim')
+
+    call jetpack#add('alaviss/nim.nvim')
+
+    call jetpack#add('nvim-lualine/lualine.nvim')
+    call jetpack#add('akinsho/bufferline.nvim')
+
+    call jetpack#add('prettier/vim-prettier')
 call jetpack#end()
