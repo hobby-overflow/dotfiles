@@ -21,9 +21,6 @@ call jetpack#begin()
     call jetpack#add('junegunn/fzf', {'build': './install --all'})
     call jetpack#add('junegunn/fzf.vim')
     " call jetpack#add('yuki-yano/fzf-preview.vim', {'branch': 'release/remote', 'do': 'UpdateRemotePlugins' })
-    if has('nvim')
-        call jetpack#add('nvim-treesitter/nvim-treesitter')
-    endif
 
     call jetpack#add('vim-airline/vim-airline')
     call jetpack#add('sainnhe/gruvbox-material')
