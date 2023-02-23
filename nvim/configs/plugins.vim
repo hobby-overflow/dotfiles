@@ -45,4 +45,7 @@ call jetpack#begin()
     call jetpack#add('akinsho/bufferline.nvim')
 
     call jetpack#add('prettier/vim-prettier')
+    call jetpack#add('lambdalisue/fern.vim')
+    call jetpack#add('lambdalisue/nerdfont.vim')
+    call jetpack#add('lambdalisue/fern-renderer-nerdfont.vim')
 call jetpack#end()

@@ -47,3 +47,5 @@ autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
 lua << END
 require("lualine").setup()
 END
+
+let g:fern#renderer = "nerdfont"
