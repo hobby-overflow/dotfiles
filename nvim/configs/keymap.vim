@@ -29,9 +29,6 @@ autocmd TermOpen " startinsert
 
 noremap <C-_> :Commentary<CR><ESC>
 
-"" coc
-let g:coc_global_extensions = ['coc-tsserver', 'coc-eslint8', 'coc-prettier', 'coc-git', 'coc-lists', 'coc-fzf-preview']
-
 inoremap <silent> <expr> <C-l> coc#refresh()
 nnoremap <silent> K    :<C-u>call <SID>show_documentation()<CR>
 nmap <silent> [dev]rn <Plug>(coc-rename)
@@ -92,3 +89,5 @@ inoremap <silent><expr> <Down> coc#pum#visible() ? coc#pum#next(0) : "\<Down>"
 inoremap <silent><expr> <Up> coc#pum#visible() ? coc#pum#prev(0) : "\<Up>"
 
 nnoremap <F2> :CocCommand document.renameCurrentWord<CR>
+
+nnoremap <silent> <Leader>e :<C-u>Fern .<CR>
