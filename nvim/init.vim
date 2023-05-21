@@ -43,6 +43,8 @@ if has('unix')
 endif
 
 autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
+autocmd BufNewFile,BufRead tsconfig.json set filetype=jsonc
+autocmd BufNewFile,BufRead tsconfig.node.json set filetype=jsonc
 
 lua << END
 require("lualine").setup()
