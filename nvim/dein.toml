@@ -1,0 +1,152 @@
+# [[plugins]]
+# repo = 'neoclide/coc.nvim'
+# merge = 0
+# rev = "release"
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+
+[[plugins]]
+repo = 'vim-denops/denops.vim'
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'editorconfig/editorconfig-vim'
+
+[[plugins]]
+repo = 'lambdalisue/fern.vim'
+hook_add = "let g:fern#renderer = 'nerdfont'"
+
+[[plugins]]
+repo = 'lambdalisue/nerdfont.vim'
+
+[[plugins]]
+repo = 'lambdalisue/fern-renderer-nerdfont.vim'
+
+[[plugins]]
+repo = 'nvim-lualine/lualine.nvim'
+lua_add = """
+require('lualine').setup()
+"""
+
+[[plugins]]
+repo = 'sainnhe/gruvbox-material'
+hook_add = 'colorscheme gruvbox-material'
+
+[[plugins]]
+repo = 'neovim/nvim-lspconfig'
+
+[[plugins]]
+repo = 'williamboman/mason.nvim'
+lua_add = 'require("mason").setup()'
+
+[[plugins]]
+repo = 'williamboman/mason-lspconfig.nvim'
+lua_add = """
+local mason_lspconfig = require('mason-lspconfig')
+ mason_lspconfig.setup_handlers({ function(server_name)
+   local opts = {}
+   opts.on_attach = function(_, bufnr)
+     local bufopts = { silent = true, buffer = bufnr }
+     vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
+     vim.keymap.set('n', 'gtD', vim.lsp.buf.type_definition, bufopts)
+     vim.keymap.set('n', 'grf', vim.lsp.buf.references, bufopts)
+     vim.keymap.set('n', '<space>p', vim.lsp.buf.format, bufopts)
+     vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', bufopts)
+  end
+   require('lspconfig')[server_name].setup(opts)
+ end })
+"""
+
+[[plugins]]
+repo = 'L3MON4D3/LuaSnip'
+
+[[plugins]]
+repo = 'hrsh7th/nvim-cmp'
+lua_add = """
+local status, cmp = pcall(require, "cmp")
+if (not status) then return end
+local lspkind = require 'lspkind'
+
+cmp.setup({
+  snippet = {
+    expand = function(args)
+      require('luasnip').lsp_expand(args.body)
+    end,
+  },
+  mapping = cmp.mapping.preset.insert({
+    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-e>'] = cmp.mapping.close(),
+    ['<CR>'] = cmp.mapping.confirm({
+      behavior = cmp.ConfirmBehavior.Replace,
+      select = true
+    }),
+  }),
+  sources = cmp.config.sources({
+    { name = 'nvim_lsp' },
+    { name = 'buffer' },
+  }),
+  formatting = {
+    format = lspkind.cmp_format({ with_text = false, maxwidth = 50 })
+  }
+})
+
+vim.cmd [[
+  set completeopt=menuone,noinsert,noselect
+  highlight! default link CmpItemKind CmpItemMenuDefault
+]]
+"""
+
+[[plugins]]
+repo = 'hrsh7th/cmp-nvim-lsp'
+
+[[plugins]]
+repo = 'hrsh7th/vim-vsnip'
+
+[[plugins]]
+repo = 'onsails/lspkind-nvim'
+
+[[plugins]]
+repo = 'windwp/nvim-ts-autotag'
+lua_source = """
+local status, autotag = pcall(require, "nvim-ts-autotag")
+if (not status) then return end
+autotag.setup({})
+"""
+[[plugins]]
+repo = 'nvim-treesitter/nvim-treesitter'
+merged = 0
+hook_post_update = 'TSUpdate'
+lua_source = """
+require("nvim-treesitter.configs").setup {
+  highlight = {
+    enable = true,
+    disable = {},
+  },
+  indent = {
+    enable = true,
+    disable = {},
+  },
+  ensure_installed = {
+    "js",
+    "jsx",
+    "ts",
+    "tsx",
+    "toml",
+    "json",
+    "css",
+    "html"
+    "lua"
+  },
+  autotag = {
+    enable = true,
+  }
+}
+
+local parser_conifg = require "nvim-treesitter.parsers".get_parser_configs()
+parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx" }
+"""
