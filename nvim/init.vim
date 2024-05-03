@@ -47,7 +47,7 @@ autocmd BufNewFile,BufRead tsconfig.json set filetype=jsonc
 autocmd BufNewFile,BufRead tsconfig.node.json set filetype=jsonc
 
 lua << END
-require("lualine").setup()
+-- require("lualine").setup()
 END
 
 let g:fern#renderer = "nerdfont"
