@@ -48,6 +48,12 @@ autocmd BufNewFile,BufRead tsconfig.node.json set filetype=jsonc
 
 lua << END
 -- require("lualine").setup()
+require("nvim-treesitter.configs").setup ({
+    auto_install = true,
+    highlight = {
+        enable = true,
+    }
+})
 END
 
 let g:fern#renderer = "nerdfont"
